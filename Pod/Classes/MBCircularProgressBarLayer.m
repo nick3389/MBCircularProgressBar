@@ -157,7 +157,7 @@
     NSDictionary* unitFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.unitFontName size:self.unitFontSize == -1 ? rectSize.height/7 : self.unitFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
     
     NSAttributedString* unit =
-    [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", self.unitString] attributes:unitFontAttributes];
+    [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"\n%@", self.unitString] attributes:unitFontAttributes];
     [text appendAttributedString:unit];
   }
   
