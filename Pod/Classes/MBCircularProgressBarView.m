@@ -60,9 +60,9 @@
     [self setDecimalPlaces:0];
     [self setShowUnitString:YES];
     [self setShowValueString:YES];
-    [self setValueFontName:@"HelveticaNeue-Thin"];
+    [self setValueFontName:@"HelveticaNeue"];
     [self setTextOffset:CGPointMake(0, 0)];
-    [self setUnitFontName:@"HelveticaNeue-Thin"];
+    [self setUnitFontName:@"HelveticaNeue"];
     [self setCountdown:NO];
 }
 
