@@ -21,6 +21,12 @@ IB_DESIGNABLE
 @property (nonatomic,assign) IBInspectable BOOL      showValueString;
 
 /**
+ * The default string value of the progress bar, if any is desired
+ */
+@property (nonatomic,assign) IBInspectable NSString *textValue;
+
+
+/**
  * The value of the progress bar  
  */
 @property (nonatomic,assign) IBInspectable CGFloat   value;
