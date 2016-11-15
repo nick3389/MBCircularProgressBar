@@ -174,11 +174,11 @@
 }
 
 -(void)setTextValueFontColor:(UIColor*)color{
-    self.progressLayer.fontColor = color;
+    self.progressLayer.textValueFontColor = color;
 }
 
 -(UIColor*)textValueFontColor{
-    return self.progressLayer.fontColor;
+    return self.progressLayer.textValueFontColor;
 }
 
 -(void)setProgressStrokeColor:(UIColor*)color{
