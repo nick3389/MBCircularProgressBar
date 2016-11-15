@@ -36,6 +36,7 @@
 @dynamic showValueString;
 @dynamic textOffset;
 @dynamic countdown;
+@dynamic textValue;
 
 #pragma mark - Drawing
 
@@ -133,11 +134,18 @@
     NSString *formatString = [NSString stringWithFormat:@"%%.%df", (int)self.decimalPlaces];
     
     NSString* textToPresent;
-    if (self.countdown) {
-        textToPresent = [NSString stringWithFormat:formatString, (self.maxValue - self.value)];
+    
+    if (self.textValue != nil) {
+        textToPresent = [NSString stringWithFormat:@"%@", self.textValue];
     } else {
-        textToPresent = [NSString stringWithFormat:formatString, self.value];
+        if (self.countdown) {
+            textToPresent = [NSString stringWithFormat:formatString, (self.maxValue - self.value)];
+        } else {
+            textToPresent = [NSString stringWithFormat:formatString, self.value];
+        }
+
     }
+    
     NSAttributedString* value = [[NSAttributedString alloc] initWithString:textToPresent
                                                                 attributes:valueFontAttributes];
     [text appendAttributedString:value];

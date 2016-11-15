@@ -30,6 +30,11 @@
 @property (nonatomic,assign) CGFloat  value;
 
 /**
+ * The default string value of the progress bar
+ */
+@property (nonatomic,assign) NSString *textValue;
+
+/**
  * The maximum possible value, used to calculate the progress (value/maxValue)	[0,∞)
  */
 @property (nonatomic,assign) CGFloat  maxValue;
