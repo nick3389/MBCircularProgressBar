@@ -137,6 +137,7 @@
     
     if (self.textValue != nil) {
         textToPresent = [NSString stringWithFormat:@"%@", self.textValue];
+        valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};
     } else {
         if (self.countdown) {
             textToPresent = [NSString stringWithFormat:formatString, (self.maxValue - self.value)];

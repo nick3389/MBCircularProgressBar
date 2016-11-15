@@ -64,6 +64,7 @@
     [self setTextOffset:CGPointMake(0, 0)];
     [self setUnitFontName:@"HelveticaNeue"];
     [self setCountdown:NO];
+    [self setTextValueFontColor:[UIColor blackColor]];
 }
 
 #pragma mark - Getters and Setters for layer properties
@@ -169,6 +170,14 @@
 }
 
 -(UIColor*)fontColor{
+    return self.progressLayer.fontColor;
+}
+
+-(void)setTextValueFontColor:(UIColor*)color{
+    self.progressLayer.fontColor = color;
+}
+
+-(UIColor*)textValueFontColor{
     return self.progressLayer.fontColor;
 }
 

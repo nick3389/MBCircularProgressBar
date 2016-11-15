@@ -70,6 +70,11 @@
 @property (nonatomic,strong) UIColor  *fontColor;
 
 /**
+ * The color of the text value color
+ */
+@property (nonatomic,strong) UIColor *textValueFontColor;
+
+/**
  * The width of the progress bar (user space units)	[0,∞)
  */
 @property (nonatomic,assign) CGFloat    progressLineWidth;

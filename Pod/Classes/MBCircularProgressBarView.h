@@ -82,6 +82,11 @@ IB_DESIGNABLE
 @property (nonatomic,strong) IBInspectable UIColor   *fontColor;
 
 /**
+ * The color of the text value color
+ */
+@property (nonatomic,strong) IBInspectable UIColor   *textValueFontColor;
+
+/**
  * Progress bar rotation (Clockewise)	[0,100] 
  */
 @property (nonatomic,assign) IBInspectable CGFloat   progressRotationAngle;
