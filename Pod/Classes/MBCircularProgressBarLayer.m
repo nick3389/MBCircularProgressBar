@@ -127,8 +127,11 @@
     
     CGFloat valueFontSize = self.valueFontSize == -1 ? rectSize.height/5 : self.valueFontSize;
     
-    NSDictionary* valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+//    [UIFont systemFontOfSize:valueFontSize]
     
+//    NSDictionary* valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+    NSDictionary* valueFontAttributes = @{NSFontAttributeName: self.genericFont, NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+
     NSMutableAttributedString *text = [NSMutableAttributedString new];
     
     NSString *formatString = [NSString stringWithFormat:@"%%.%df", (int)self.decimalPlaces];
@@ -137,7 +140,9 @@
     
     if (self.textValue != nil) {
         textToPresent = [NSString stringWithFormat:@"%@", self.textValue];
-        valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};
+//        valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};
+        valueFontAttributes = @{NSFontAttributeName: self.genericFont, NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};
+
     } else {
         if (self.countdown) {
             textToPresent = [NSString stringWithFormat:formatString, (self.maxValue - self.value)];
@@ -154,7 +159,8 @@
     // set the decimal font size
     NSUInteger decimalLocation = [text.string rangeOfString:@"."].location;
     if (decimalLocation != NSNotFound){
-        NSDictionary* valueDecimalFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:self.valueDecimalFontSize == -1 ? valueFontSize : self.valueDecimalFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+//        NSDictionary* valueDecimalFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:self.valueDecimalFontSize == -1 ? valueFontSize : self.valueDecimalFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+        NSDictionary* valueDecimalFontAttributes = @{NSFontAttributeName: self.genericFont, NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
         NSRange decimalRange = NSMakeRange(decimalLocation, text.length - decimalLocation);
         [text setAttributes:valueDecimalFontAttributes range:decimalRange];
     }
@@ -162,8 +168,9 @@
     // ad the unit only if specified
     NSMutableAttributedString *text1 = [NSMutableAttributedString new];
     if (self.showUnitString) {
-        NSDictionary* unitFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.unitFontName size:self.unitFontSize == -1 ? rectSize.height/7 : self.unitFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
-        
+//        NSDictionary* unitFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.unitFontName size:self.unitFontSize == -1 ? rectSize.height/7 : self.unitFontSize], NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+        NSDictionary* unitFontAttributes = @{NSFontAttributeName: self.genericFont, NSForegroundColorAttributeName: self.fontColor, NSParagraphStyleAttributeName: textStyle};
+
         NSAttributedString* unit = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", self.unitString] attributes:unitFontAttributes];
         [text1 appendAttributedString:unit];
     }
