@@ -60,9 +60,9 @@
     [self setDecimalPlaces:0];
     [self setShowUnitString:YES];
     [self setShowValueString:YES];
-    [self setValueFontName:@"HelveticaNeue"];
+    [self setValueFontName:@"System"];
     [self setTextOffset:CGPointMake(0, 0)];
-    [self setUnitFontName:@"HelveticaNeue"];
+    [self setUnitFontName:@"System"];
     [self setCountdown:NO];
     [self setTextValueFontColor:[UIColor blackColor]];
 }
