@@ -66,7 +66,8 @@ IB_DESIGNABLE
  */
 @property (nonatomic,copy)   IBInspectable NSString  *unitFontName;
 
-@property (nonatomic,copy) IBInspectable UIFont *genericFont;
+@property (nonatomic,copy) IBInspectable UIFont *valueFont;
+@property (nonatomic,copy) IBInspectable UIFont *unitFont;
 
 /**
  * The font size of the unit text	[0,∞) 

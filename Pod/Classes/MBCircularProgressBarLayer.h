@@ -133,7 +133,8 @@
  */
 @property (nonatomic,copy)    NSString  *valueFontName;
 
-@property (nonatomic,copy) UIFont *genericFont;
+@property (nonatomic,copy) UIFont *valueFont;
+@property (nonatomic,copy) UIFont *unitFont;
 
 /**
  * Should show unit screen

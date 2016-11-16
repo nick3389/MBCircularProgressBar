@@ -65,6 +65,8 @@
     [self setUnitFontName:@"HelveticaNeue"];
     [self setCountdown:NO];
     [self setTextValueFontColor:[UIColor blackColor]];
+    [self setValueFont:[UIFont systemFontOfSize:25]];
+    [self setUnitFont:[UIFont systemFontOfSize:10]];
 }
 
 #pragma mark - Getters and Setters for layer properties
@@ -276,12 +278,20 @@
   return self.progressLayer.valueFontName;
 }
 
--(void)setGenericFont:(UIFont *)valueFontName{
-    self.progressLayer.genericFont = valueFontName;
+-(void)setValueFont:(UIFont *)valueFont{
+    self.progressLayer.valueFont = valueFont;
 }
 
--(UIFont *)genericFont{
-    return self.progressLayer.genericFont;
+-(UIFont *)valueFont{
+    return self.progressLayer.valueFont;
+}
+
+-(void)setUnitFont:(UIFont *)valueFont{
+    self.progressLayer.unitFont = valueFont;
+}
+
+-(UIFont *)unitFont{
+    return self.progressLayer.unitFont;
 }
 
 -(void)setShowUnitString:(BOOL)showUnitString{
