@@ -23,7 +23,7 @@ IB_DESIGNABLE
 /**
  * The default string value of the progress bar, if any is desired
  */
-@property (nonatomic,assign) IBInspectable NSString *textValue;
+@property (nonatomic,copy) IBInspectable NSString *textValue;
 
 
 /**

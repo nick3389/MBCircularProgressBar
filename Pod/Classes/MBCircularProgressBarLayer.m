@@ -138,7 +138,7 @@
     
     NSString* textToPresent;
     
-    if (self.textValue != nil) {
+    if (self.value < 0) {
         textToPresent = [NSString stringWithFormat:@"%@", self.textValue];
 //        valueFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: self.valueFontName size:valueFontSize], NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};
         valueFontAttributes = @{NSFontAttributeName: valueFont, NSForegroundColorAttributeName: self.textValueFontColor, NSParagraphStyleAttributeName: textStyle};

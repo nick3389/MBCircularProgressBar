@@ -32,7 +32,7 @@
 /**
  * The default string value of the progress bar
  */
-@property (nonatomic,assign) NSString *textValue;
+@property (nonatomic,copy) NSString *textValue;
 
 /**
  * The maximum possible value, used to calculate the progress (value/maxValue)	[0,∞)

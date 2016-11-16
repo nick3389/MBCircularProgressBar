@@ -42,7 +42,7 @@
     [self setContentScaleFactor:[[UIScreen mainScreen] scale]];
   
     [self setUnitString:@"%"];
-    [self setValue:0.f];
+    [self setValue:-1.f];
     [self setMaxValue:100.f];
     [self setProgressRotationAngle:0.f];
     [self setProgressStrokeColor:[UIColor orangeColor]];
