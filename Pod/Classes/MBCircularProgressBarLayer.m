@@ -180,7 +180,7 @@
     CGSize unitSize = [text1 size];
     
     CGPoint textCenter = CGPointMake(rectSize.width/2-percentSize.width/2 + self.textOffset.x, rectSize.height/2-percentSize.height/2 + self.textOffset.y);
-    CGPoint unitCenter = CGPointMake(rectSize.width/2-unitSize.width/2 + self.textOffset.x, textCenter.y + percentSize.height);
+    CGPoint unitCenter = CGPointMake(rectSize.width/2-unitSize.width/2 + self.textOffset.x, textCenter.y + percentSize.height - 2);
     [text drawAtPoint:textCenter];
     [text1 drawAtPoint:unitCenter];
 }
